@@ -13,16 +13,16 @@ public class TestEntity {
   private final String foo;
   private final String foobar;
   private final String bar;
-//  private final List<TestEntity> entityList;
+  private final List<TestEntity> entityList;
 
   private int cachedHashCode = -1;
 
   public TestEntity(@MapsTo("foo") String foo, @MapsTo("bar") String bar
-  //        , @MapsTo("entityList") List<TestEntity> entityList
+          , @MapsTo("entityList") List<TestEntity> entityList
   ) {
     this.foo = foo;
     this.bar = bar;
-  //  this.entityList = entityList;
+    this.entityList = entityList;
     this.foobar = foo + bar;
   }
 
