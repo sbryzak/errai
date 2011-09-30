@@ -1,6 +1,7 @@
 package org.jboss.errai.marshalling.tests.res;
 
-import org.jboss.errai.bus.server.annotations.Portable;
+
+import org.jboss.errai.common.client.api.annotations.Portable;
 import org.jboss.errai.marshalling.client.api.MapsTo;
 
 import java.util.List;
@@ -9,20 +10,20 @@ import java.util.List;
  * @author Mike Brock <cbrock@redhat.com>
  */
 @Portable
-public class TestEntity {
+public class EntityToTestA {
   private final String foo;
   private final String foobar;
   private final String bar;
-  private final List<TestEntity> entityList;
+  private final List<EntityToTestA> entityToTestAList;
 
   private int cachedHashCode = -1;
 
-  public TestEntity(@MapsTo("foo") String foo, @MapsTo("bar") String bar
-          , @MapsTo("entityList") List<TestEntity> entityList
+  public EntityToTestA(@MapsTo("foo") String foo, @MapsTo("bar") String bar
+          , @MapsTo("entityToTestAList") List<EntityToTestA> entityToTestAList
   ) {
     this.foo = foo;
     this.bar = bar;
-    this.entityList = entityList;
+    this.entityToTestAList = entityToTestAList;
     this.foobar = foo + bar;
   }
 

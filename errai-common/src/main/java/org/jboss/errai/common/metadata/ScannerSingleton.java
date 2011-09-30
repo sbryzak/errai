@@ -13,9 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jboss.errai.bus.rebind;
-
-import org.jboss.errai.bus.server.service.metadata.MetaDataScanner;
+package org.jboss.errai.common.metadata;
 
 /**
  * Shared scanner instance used with {@link com.google.gwt.core.ext.Generator}'s
