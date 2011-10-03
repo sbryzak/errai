@@ -15,16 +15,20 @@ public class EntityToTestA {
   private final String foobar;
   private final String bar;
   private final List<EntityToTestA> entityToTestAList;
+  private final EntityToTestA[][] arraysOfEntities;
 
   private int cachedHashCode = -1;
 
-  public EntityToTestA(@MapsTo("foo") String foo, @MapsTo("bar") String bar
-          , @MapsTo("entityToTestAList") List<EntityToTestA> entityToTestAList
+  public EntityToTestA(@MapsTo("foo") String foo,
+                       @MapsTo("bar") String bar,
+                       @MapsTo("entityToTestAList") List<EntityToTestA> entityToTestAList,
+                       @MapsTo("arraysOfEntities") EntityToTestA[][] arraysOfEntities
   ) {
     this.foo = foo;
     this.bar = bar;
     this.entityToTestAList = entityToTestAList;
     this.foobar = foo + bar;
+    this.arraysOfEntities = arraysOfEntities;
   }
 
   public String getFoo() {
