@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * @author Mike Brock <cbrock@redhat.com>
  */
-@Portable
+//@Portable
 public class EntityToTestB {
 //  private String foo;
 //  private int num;

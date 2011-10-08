@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.jboss.errai.bus.client.tests.support;
+package org.jboss.errai.marshalling.tests.res;
 
-import org.jboss.errai.common.client.api.annotations.ExposeEntity;
+import org.jboss.errai.common.client.api.annotations.Portable;
 
 import java.util.*;
 
-@ExposeEntity
+// @Portable
 public class SType extends STypeSuper {
   private String fieldOne;
   private String fieldTwo;
@@ -324,119 +324,119 @@ public class SType extends STypeSuper {
     return builder.append("]").toString();
   }
 
-  public static SType create(RandomProvider random) {
-    final SType sType1 = randomLeafCreate(random);
-    sType1.setActive(true);
-    sType1.setEndDate(new Date(System.currentTimeMillis()));
-    sType1.setStartDate(new Date(System.currentTimeMillis() - 10000));
-    sType1.setFieldOne("One!");
-    sType1.setFieldTwo("Two!!");
-    sType1.setPlace(Place.FIRST);
+//  public static SType create(RandomProvider random) {
+//    final SType sType1 = randomLeafCreate(random);
+//    sType1.setActive(true);
+//    sType1.setEndDate(new Date(System.currentTimeMillis()));
+//    sType1.setStartDate(new Date(System.currentTimeMillis() - 10000));
+//    sType1.setFieldOne("One!");
+//    sType1.setFieldTwo("Two!!");
+//    sType1.setPlace(Place.FIRST);
+//
+//    List<SType> listOfStypes = new ArrayList<SType>();
+//
+//    final SType sType2 = randomLeafCreate(random);
+//    sType2.setActive(true);
+//    sType2.setEndDate(new Date(System.currentTimeMillis() + 1393));
+//    sType2.setStartDate(new Date(System.currentTimeMillis() - 3443));
+//    sType2.setFieldOne("Hrmm");
+//    sType2.setFieldTwo("Haaa");
+//    sType2.setPlace(Place.SECOND);
+//
+//    listOfStypes.add(sType2);
+//
+//    final SType sType3 = randomLeafCreate(random);
+//    sType3.setActive(false);
+//    sType3.setEndDate(new Date(System.currentTimeMillis() + 555));
+//    sType3.setStartDate(new Date(System.currentTimeMillis() - 232));
+//    sType3.setFieldOne("Eeek");
+//    sType3.setFieldTwo("Oooh");
+//    sType3.setPlace(Place.THIRD);
+//
+//    listOfStypes.add(sType3);
+//
+//    sType1.setListOfStypes(listOfStypes);
+//
+//    Map<String, SType> mapOfSTypes = new HashMap<String, SType>();
+//
+//    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
+//    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
+//    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
+//
+//    sType1.setMapofStypes(mapOfSTypes);
+//
+//    Map<SType, SType> sTypeToSType = new HashMap<SType, SType>();
+//    sTypeToSType.put(randomLeafCreate(random), randomLeafCreate(random));
+//    sType1.setsTypeToStype(sTypeToSType);
+//
+//    List<Date> listOfDates = new LinkedList<Date>();
+//    listOfDates.add(new Date(System.currentTimeMillis() + 3000));
+//    listOfDates.add(new Date(System.currentTimeMillis() + 10000));
+//    listOfDates.add(new Date(System.currentTimeMillis() + 20000));
+//
+//    sType1.setListOfDates(listOfDates);
+//
+//    SType[] sTypeArray = new SType[random.nextInt(10) + 1];
+//
+//    for (int i = 0; i < sTypeArray.length; i++) {
+//      sTypeArray[i] = randomLeafCreate(random);
+//    }
+//
+//    sType1.setsTypeArray(sTypeArray);
+//
+//    return sType1;
+//  }
 
-    List<SType> listOfStypes = new ArrayList<SType>();
+//  private static SType randomLeafCreate(RandomProvider random) {
+//    final SType sType = new SType();
+//    sType.setSuperValue(random.randString());
+//    sType.setActive(random.nextBoolean());
+//    sType.setFieldOne(random.randString());
+//    sType.setFieldTwo(random.randString());
+//    sType.setStartDate(randDatePast(random));
+//    sType.setEndDate(randDateFuture(random));
+//    sType.setByteValue((byte) random.nextInt(100000));
+//    sType.setFloatValue(new Double(random.nextDouble()).floatValue() + random.nextInt(10000));
+//    sType.setIntValue(random.nextInt(100000));
+//    sType.setDoubleValue(random.nextInt(100000) + random.nextDouble());
+//    sType.setLongValue(random.nextInt(1000000));
+//    sType.setCharValue(random.nextChar());
+//    sType.setShortValue((short) (random.nextInt(Short.MAX_VALUE) - 1));
+//    sType.setPlace(randPlace(random));
+//
+//    char[] charArray = new char[random.nextInt(10) + 1];
+//
+//    for (int i = 0; i < charArray.length; i++) {
+//      charArray[i] = random.nextChar();
+//    }
+//
+//    sType.setCharArray(charArray);
+//
+//    char[][] charArrayMulti = new char[random.nextInt(10) + 1][random.nextInt(10) + 1];
+//
+//    for (int i = 0; i < charArrayMulti.length; i++) {
+//      char[] subArray = new char[charArrayMulti[i].length];
+//      for (int i2 = 0; i2 < charArrayMulti[i].length; i2++) {
+//        charArrayMulti[i][i2] = random.nextChar();
+//      }
+//    }
+//
+//    sType.setCharArrayMulti(charArrayMulti);
+//
+//
+//    return sType;
+//  }
+//
+//
+//  private static Date randDateFuture(RandomProvider random) {
+//    return new Date(System.currentTimeMillis() + random.nextInt(100000));
+//  }
 
-    final SType sType2 = randomLeafCreate(random);
-    sType2.setActive(true);
-    sType2.setEndDate(new Date(System.currentTimeMillis() + 1393));
-    sType2.setStartDate(new Date(System.currentTimeMillis() - 3443));
-    sType2.setFieldOne("Hrmm");
-    sType2.setFieldTwo("Haaa");
-    sType2.setPlace(Place.SECOND);
-
-    listOfStypes.add(sType2);
-
-    final SType sType3 = randomLeafCreate(random);
-    sType3.setActive(false);
-    sType3.setEndDate(new Date(System.currentTimeMillis() + 555));
-    sType3.setStartDate(new Date(System.currentTimeMillis() - 232));
-    sType3.setFieldOne("Eeek");
-    sType3.setFieldTwo("Oooh");
-    sType3.setPlace(Place.THIRD);
-
-    listOfStypes.add(sType3);
-
-    sType1.setListOfStypes(listOfStypes);
-
-    Map<String, SType> mapOfSTypes = new HashMap<String, SType>();
-
-    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
-    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
-    mapOfSTypes.put(random.randString(), randomLeafCreate(random));
-
-    sType1.setMapofStypes(mapOfSTypes);
-
-    Map<SType, SType> sTypeToSType = new HashMap<SType, SType>();
-    sTypeToSType.put(randomLeafCreate(random), randomLeafCreate(random));
-    sType1.setsTypeToStype(sTypeToSType);
-
-    List<Date> listOfDates = new LinkedList<Date>();
-    listOfDates.add(new Date(System.currentTimeMillis() + 3000));
-    listOfDates.add(new Date(System.currentTimeMillis() + 10000));
-    listOfDates.add(new Date(System.currentTimeMillis() + 20000));
-
-    sType1.setListOfDates(listOfDates);
-
-    SType[] sTypeArray = new SType[random.nextInt(10) + 1];
-
-    for (int i = 0; i < sTypeArray.length; i++) {
-      sTypeArray[i] = randomLeafCreate(random);
-    }
-
-    sType1.setsTypeArray(sTypeArray);
-
-    return sType1;
-  }
-
-  private static SType randomLeafCreate(RandomProvider random) {
-    final SType sType = new SType();
-    sType.setSuperValue(random.randString());
-    sType.setActive(random.nextBoolean());
-    sType.setFieldOne(random.randString());
-    sType.setFieldTwo(random.randString());
-    sType.setStartDate(randDatePast(random));
-    sType.setEndDate(randDateFuture(random));
-    sType.setByteValue((byte) random.nextInt(100000));
-    sType.setFloatValue(new Double(random.nextDouble()).floatValue() + random.nextInt(10000));
-    sType.setIntValue(random.nextInt(100000));
-    sType.setDoubleValue(random.nextInt(100000) + random.nextDouble());
-    sType.setLongValue(random.nextInt(1000000));
-    sType.setCharValue(random.nextChar());
-    sType.setShortValue((short) (random.nextInt(Short.MAX_VALUE) - 1));
-    sType.setPlace(randPlace(random));
-
-    char[] charArray = new char[random.nextInt(10) + 1];
-
-    for (int i = 0; i < charArray.length; i++) {
-      charArray[i] = random.nextChar();
-    }
-
-    sType.setCharArray(charArray);
-
-    char[][] charArrayMulti = new char[random.nextInt(10) + 1][random.nextInt(10) + 1];
-
-    for (int i = 0; i < charArrayMulti.length; i++) {
-      char[] subArray = new char[charArrayMulti[i].length];
-      for (int i2 = 0; i2 < charArrayMulti[i].length; i2++) {
-        charArrayMulti[i][i2] = random.nextChar();
-      }
-    }
-
-    sType.setCharArrayMulti(charArrayMulti);
-
-
-    return sType;
-  }
-
-
-  private static Date randDateFuture(RandomProvider random) {
-    return new Date(System.currentTimeMillis() + random.nextInt(100000));
-  }
-
-  private static Date randDatePast(RandomProvider random) {
-    return new Date(System.currentTimeMillis() - random.nextInt(100000));
-  }
-
-  private static Place randPlace(RandomProvider random) {
-    return Place.values()[random.nextInt(100000) % Place.values().length];
-  }
+//  private static Date randDatePast(RandomProvider random) {
+//    return new Date(System.currentTimeMillis() - random.nextInt(100000));
+//  }
+//
+//  private static Place randPlace(RandomProvider random) {
+//    return Place.values()[random.nextInt(100000) % Place.values().length];
+//  }
 }
