@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author Mike Brock <cbrock@redhat.com>
  */
-@Portable
+//@Portable
 public class EntityToTestA {
   private final String foo;
   private final String foobar;

@@ -14,18 +14,8 @@
  * limitations under the License.
  */
 
-package org.jboss.errai.common.client.protocols;
+package org.jboss.errai.marshalling.tests.res.shared;
 
-public class SerializationParts {
-  public static final String MARSHALLED_TYPES = "__MarshalledTypes";
-  public static final String ENCODED_TYPE = "__EncodedType";
-  public static final String OBJECT_ID = "__ObjectID";
-  public static final String VALUE = "Value";
-
-  public static final String EMBEDDED_JSON = "${$JSON$}$::";
-
-  public static final String ENUM_STRING_VALUE = "EnumStringValue";
-
-  private SerializationParts() {
-  }
+public enum RecordType {
+  Checking, Savings
 }
