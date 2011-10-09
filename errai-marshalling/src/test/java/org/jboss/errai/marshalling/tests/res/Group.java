@@ -8,7 +8,6 @@ import java.util.Map;
 /**
  * @author Mike Brock <cbrock@redhat.com>
  */
-@ExposeEntity
 public class Group {
   private int groupId;
   private String name;
